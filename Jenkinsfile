@@ -9,5 +9,13 @@ pipeline {
            '''
       }
     }
+    stage('Building App') {
+      steps{
+        sh '''
+           pwd
+           mvn install
+           '''
+      }
+    }
   }
 }
