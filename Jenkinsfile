@@ -12,8 +12,7 @@ pipeline {
     stage('Building App') {
       steps{
         sh '''
-           pwd
-           mvn install
+           docker build -t pythonapp .
            '''
       }
     }
