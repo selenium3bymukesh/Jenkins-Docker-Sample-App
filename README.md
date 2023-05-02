@@ -1,2 +1,2 @@
-# Jenkins-Maven-Sample-App
+# Jenkins-Docker-Sample-App
 Sample App for Jenkins Demo
