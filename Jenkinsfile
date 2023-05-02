@@ -11,9 +11,15 @@ pipeline {
     }
     stage('Building App') {
       steps{
-        sh '''
-           docker build -t pythonapp .
-           '''
+        parallel(
+          build: {
+            sh '''
+            docker build -t pythonapp .
+            '''
+          },
+          test: {
+            echo "This is dummy step"
+          }
       }
     }
   }
